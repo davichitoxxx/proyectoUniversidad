@@ -15,11 +15,16 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <div id="google_translate_element" style="display:none"></div>
+    <div id="google_translate_element" class="translate-float"></div>
     <script type="text/javascript">
       function googleTranslateElementInit() {
         new google.translate.TranslateElement(
-          { pageLanguage: 'es', includedLanguages: 'en,es', autoDisplay: false },
+          {
+            pageLanguage: 'es',
+            includedLanguages: 'en,es',
+            autoDisplay: false,
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
           'google_translate_element'
         )
       }
