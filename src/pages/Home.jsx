@@ -87,7 +87,7 @@ function Header() {
       </span>
       <div className="flex items-center gap-5">
         
-        <q  href="#productos"
+        <a  href="#productos"
           className="font-body text-sm text-cream-200/70 hover:text-gold-400 transition-colors"
         >
           Ver catálogo
