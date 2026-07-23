@@ -121,8 +121,11 @@ function Hero() {
 function Footer() {
   return (
     <footer className="border-t border-cacao-700/60">
-      <div className="mx-auto max-w-6xl px-6 py-8 font-body text-xs text-cream-200/50">
-        © {new Date().getFullYear()} Cacao Amargo. Hecho en pequeños lotes.
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8 font-body text-xs text-cream-200/50">
+        <span>© {new Date().getFullYear()} Cacao Amargo. Hecho en pequeños lotes.</span>
+        <a href="/admin" className="hover:text-gold-400 transition-colors">
+          Admin
+        </a>
       </div>
     </footer>
   )
