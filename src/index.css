@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1B120D;
+  color: #F5EFE6;
+}
+
+::selection {
+  background-color: #C89B5C;
+  color: #1B120D;
+}
+
+/* Foco visible para accesibilidad de teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #C89B5C;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Textura sutil tipo papel/grano de cacao sobre el fondo oscuro */
+.grain-bg {
+  background-image: radial-gradient(circle at 1px 1px, rgba(245, 239, 230, 0.05) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+.input {
+  @apply w-full rounded-lg border border-cacao-700 bg-cacao-950 px-4 py-2.5 text-cream-100 outline-none transition-colors focus:border-gold-500;
+}
