@@ -28,6 +28,12 @@ export default function AdminLogin() {
         onSubmit={handleSubmit}
         className="w-full max-w-sm rounded-2xl border border-cacao-700/60 bg-cacao-900 p-8"
       >
+        href="/"
+          className="mb-4 inline-flex items-center gap-1.5 text-sm text-cream-200/60 hover:text-gold-400 transition-colors"
+        >
+          ← Volver a la tienda
+        </a>
+
         <h1 className="font-display text-2xl text-cream-100">Panel administrativo</h1>
         <p className="mt-1 text-sm text-cream-200/60">Inicia sesión para gestionar el catálogo.</p>
 
