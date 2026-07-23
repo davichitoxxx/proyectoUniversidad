@@ -85,13 +85,42 @@ function Header() {
       <span className="font-display text-lg tracking-wide text-cream-100">
         Cacao<span className="text-gold-500">.</span>Amargo
       </span>
-      <a
-        href="#productos"
-        className="font-body text-sm text-cream-200/70 hover:text-gold-400 transition-colors"
-      >
-        Ver catálogo
-      </a>
+      <div className="flex items-center gap-5">
+        
+          href="#productos"
+          className="font-body text-sm text-cream-200/70 hover:text-gold-400 transition-colors"
+        >
+          Ver catálogo
+        </a>
+        <LanguageSwitcher />
+      </div>
     </header>
+  )
+}
+
+function LanguageSwitcher() {
+  function translateTo(lang) {
+    const select = document.querySelector('.goog-te-combo')
+    if (select) {
+      select.value = lang
+      select.dispatchEvent(new Event('change'))
+    }
+  }
+  return (
+    <div className="flex items-center gap-1 rounded-full border border-cacao-700 px-1 py-1 text-xs font-body">
+      <button
+        onClick={() => translateTo('es')}
+        className="rounded-full px-2.5 py-1 text-cream-200/70 hover:text-gold-400"
+      >
+        ES
+      </button>
+      <button
+        onClick={() => translateTo('en')}
+        className="rounded-full px-2.5 py-1 text-cream-200/70 hover:text-gold-400"
+      >
+        EN
+      </button>
+    </div>
   )
 }
 
